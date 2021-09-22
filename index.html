@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Circuit Simulation</title>
+    <style>
+      button {
+        padding-left: 80px !important;
+        padding-right: 80px !important;
+        margin-top: -20px !important;
+      }
+
+      #bulb {
+        margin-bottom: -40px;
+        margin-left: -30px;
+      }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="icon" href="bulb.png">
+  </head>
+  <body>
+    <div class="container">
+      <center>
+        <img src="offbulb.png" id="bulb" class="img-responsive"> <br>
+        <img src="wire.png" class="img-responsive"> <br>
+        <button class="btn btn-success btn-lg" onclick="toggle()" id="switch">Off</button> <br><br>
+      </center>
+    </div>
+    <script>
+      var onoff = 0;
+      function toggle() {
+        if (onoff == 0) {
+          onoff = 1;
+          document.getElementById("bulb").src = "onbulb.png";
+          document.getElementById("switch").innerHTML = "On";
+        } else {
+          onoff = 0;
+          document.getElementById("switch").innerHTML = "Off";
+          document.getElementById("bulb").src = "offbulb.png";
+        }
+      }
+    </script>
+  </body>
+</html>
